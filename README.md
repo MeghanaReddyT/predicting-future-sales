@@ -26,8 +26,9 @@ This data was provided by one of the largest Russian software firms - 1C Company
 * shop_name - name of shop
 * item_category_name - name of item category
 
-**Process**
+**Summary**
 * The libraries used are numpy, pandas and sklearn 
-* 
+* The given data is already clean and has no missing values.
+* Not all items in train set are in the test set and vice versa.
 
 
