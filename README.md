@@ -26,9 +26,13 @@ This data was provided by one of the largest Russian software firms - 1C Company
 * shop_name - name of shop
 * item_category_name - name of item category
 
-**Summary**
+**Process Overview**
 * The libraries used are numpy, pandas and sklearn 
 * The given data is already clean and has no missing values.
 * Not all items in train set are in the test set and vice versa.
+* Dropped the unnecessary fields like item price and date_block_num from the training dataset given.
+* Converted the dates into the convenient format.
+* Then grouped the data using the date, shop_id and item_id to get the sum of items sold for each combination in each month.
+* Then merged the test dataset given and the above train dataset on shop_id and item_id.
 
 
