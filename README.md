@@ -27,12 +27,18 @@ This data was provided by one of the largest Russian software firms - 1C Company
 * item_category_name - name of item category
 
 **Process Overview**
-* The libraries used are numpy, pandas and sklearn 
+* The libraries used are numpy, pandas and sklearn. 
 * The given data is already clean and has no missing values.
 * Not all items in train set are in the test set and vice versa.
 * Dropped the unnecessary fields like item price and date_block_num from the training dataset given.
-* Converted the dates into the convenient format.
-* Then grouped the data using the date, shop_id and item_id to get the sum of items sold for each combination in each month.
+* Converted the dates into the convenient format and converted the dates to months since the prediction is required for a month. 
+* Then formatted the data to get the sum of items sold for each combination of shop_id and item_id, for each of the months.
 * Then merged the test dataset given and the above train dataset on shop_id and item_id.
+* In the model development, I dropped the first month's data from the train dataset to ensure that the train and the test datasets have the same number of columns.
+* Then split the datasets accordingly for model fitting.
+* I have used linear regression and random forest regressor here.
+* On comparing the mean squared errors of the train and test data, and the test scores, the random forest regressor was definitely the better choice.
+* Hence, I have generated a prediction using the RFR.
+* The final submission file can be found in this repository, in which ID stands for a combination of the item_id and the shop_id, and item_cnt_month is the prediction generated which is the number of items sold monthly for that particular ID. 
 
 
